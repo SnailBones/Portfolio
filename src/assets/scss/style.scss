@@ -1,0 +1,152 @@
+// Variables
+
+// TODO: download font locally
+// @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300i");
+
+$font-size: 16px;
+$font-size-title: 24px;
+$font-size-large: 18px;
+$font-size-medium: 14px;
+$font-size-small: 12px;
+// $font-stack-base: "Montserrat" Arial, sans-serif;
+// $font-family: light italic "Montserrat" Arial, sans-serif;
+
+$font-family: Montserrat,
+Arial,
+sans-serif;
+
+$color-light: #fbfbfb;
+$color-light-muted: #e6e6ef;
+$color-blue: #243b91;
+$color-orange: #f8b200;
+$color-red: #c51d00;
+$color-gray-text: #96a2a0;
+$color-dark: #181a20;
+$color-sidebar-text: #d8f3f2;
+$color-dark-blue: #42569c;
+$color-bold-blue: #243b91;
+$color-control-gray: #4a4a53;
+
+// Import BootstrapVue
+@import "~bootstrap/scss/bootstrap.scss";
+
+// Bootstrap overrides
+
+.dropdown-menu {
+  background-color: $color-dark;
+  z-index: 1050;
+}
+
+// Globals
+
+a {
+  color: yellow;
+
+  &:hover {
+    color: white;
+  }
+}
+
+
+
+// html,
+body {
+  // font-family: $font-family;
+  background-color: $color-dark;
+  color: $color-light;
+
+  font-size: $font-size;
+  font-family: $font-family;
+  overflow: visible; // overflow: hidden;
+  // overflow-x: hidden;
+  // overflow-x: scroll;
+
+  #app {
+    // color: $color-light;
+
+    // font-family: $font-stack-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+  }
+
+  .project {
+    margin: 94px;
+  }
+
+  p {
+    // margin: 64px;
+    text-align: left;
+  }
+
+  #tree-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background: $color-dark;
+  }
+
+  .imageContainer {
+    // width: 200px;
+    // height: 200px;
+    box-shadow: 0 0 16px 4px black;
+    background-color: black;
+    margin: 5% // overflow: hidden;
+
+      // display: flex;
+      img {
+      max-width: 100%;
+      align-self: center;
+    }
+  }
+
+  .carousel {
+    margin: 32px 0 32px;
+  }
+
+  // add a subtle dark box shadow that's always behind things
+  .shade {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: "";
+      box-shadow: 0 0 16px 4px black;
+      background: black;
+      // box-shadow: 0 0 32px 32px green;
+      // background: green;
+      width: 100%;
+      height: 100%;
+      // bottom: 1px;
+      // top: 0;
+      right: 0;
+      top: 0;
+      // position: relative;
+      position: absolute;
+      z-index: -1;
+      // text-shadow: 0 0 16px red, 0 0 32px red, 0 0 8px red;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+  }
+
+  /* optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #ff0000;
+  }
+}
