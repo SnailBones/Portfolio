@@ -8,6 +8,13 @@ import JustTrees from "@/components/JustTrees"
 // import Pictures from "@/components/Pictures"
 import EPFast from "@/components/projects/EPFast"
 import Museum from "@/components/projects/Museum"
+import ExplOcean from "@/components/projects/ExplOcean"
+import WhatTreesWere from "@/components/projects/WhatTreesWere"
+import CellForest from "@/components/projects/CellForest"
+import Worms from "@/components/projects/Worms"
+import OKeeffe from "@/components/projects/OKeeffe"
+import Painless from "@/components/projects/Painless"
+import Cactris from "@/components/projects/Cactris"
 
 Vue.use(Router);
 
@@ -19,6 +26,14 @@ export default new Router({
     },
     {
       path: "/forest",
+      redirect: "/altissima",
+    },
+    {
+      path: "/trees",
+      redirect: "/altissima",
+    },
+    {
+      path: "/altissima",
       name: "Just some trees",
       component: JustTrees,
       meta: {
@@ -31,14 +46,40 @@ export default new Router({
       component: About
     },
     {
-      path: "/project/epfast",
-      // name: "EPFast",
+      path: "/project/grid",
       component: EPFast
     },
     {
       path: "/project/nature",
-      // name: "Nature Now",
       component: Museum
+    },
+    {
+      path: "/project/ocean",
+      component: ExplOcean
+    },
+    {
+      path: "/project/trees",
+      component: WhatTreesWere
+    },
+    {
+      path: "/project/forest",
+      component: CellForest
+    },
+    {
+      path: "/project/worms",
+      component: Worms
+    },
+    {
+      path: "/project/okeeffe",
+      component: OKeeffe
+    },
+    {
+      path: "/project/cactris",
+      component: Cactris
+    },
+    {
+      path: "/project/painless",
+      component: Painless
     },
     // {
     //   path: "trees",
