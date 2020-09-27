@@ -2,8 +2,7 @@
   <!-- <div class="main"> -->
   <div class="bottom">
     <!-- <h1 class="signature"> -->
-    <p>Hi! I'm Aidan.</p>
-    <br />
+    <p class = "greeting">Hi there! I'm Aidan.</p>
     <p>
       I'm a creative developer based in Albuquerque, NM.
     </p>
@@ -22,7 +21,7 @@
               <router-link to="/words">story</router-link>
             </li>
     </ul>-->
-    <p>I try to make things that help people learn while they're having fun.</p>
+    <p>I like to make things that help people learn while they're having fun.</p>
     <p>
       These things are often
       <span class="link">
@@ -98,16 +97,23 @@ body {
 
 .main {
   position: relative;
+  font-size: 4px;
 }
 
 /* .bottom {
   width: 100%;
   /* height: 100%; */
-position: absolute;
-bottom: 0;
+/* position: absolute; */
+/* bottom: 0; */
 /* bottom: 20%; */
 /* overflow-y: scroll; */
 /* }  */
+.bottom {
+  font-size: 36px;
+}
+.greeting {
+  font-size: 60px;
+}
 
 .smallfade {
   /* box-shadow: 0 0 32px 32px #181a20; */

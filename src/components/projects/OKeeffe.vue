@@ -14,9 +14,15 @@
         <p>
             Using a custom configuration menu, I adjusted the visualization on site to match the colors of Georgia O'Keeffe's paintings and reflect the goals of the exhibit's director.
         </p>
-        <p>Learn more about the <i>Seeing Beyond</i> exhibit
+        <p>
             <span class="link">
-            <a href="https://www.okeeffemuseum.org/installation/seeing-beyond/">here</a>.
+            <a href="https://www.shadertoy.com/view/tsV3Dh">View a (non-interactive) prototype of the clouds.</a>
+            </span>
+        </p>
+
+        <p>
+            <span class="link">
+            <a href="https://www.okeeffemuseum.org/installation/seeing-beyond/">Learn more about the <i>Seeing Beyond</i> exhibit.</a>
             </span>
         </p>
     </div>

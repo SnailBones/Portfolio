@@ -107,17 +107,17 @@
           link="okeeffe"
         />
         <Thumbnail
+          class="zoom-in"
+          :img="require('@/assets/img/forest/forest.webm')"
+          title="A Tree Falls: The Musical"
+          info="Interactive ecology put to data-driven music."
+          link="forest"
+        />
+        <Thumbnail
           :img="require('@/assets/img/museum/models/close.jpg')"
           title="Nature Now"
           info="A physical and digital exhibit about urban ecology."
           link="nature"
-        />
-        <Thumbnail
-          class="zoom-in"
-          :img="require('@/assets/img/forest/forest.webm')"
-          title="A Tree Falls: The Musical"
-          info="An interactive model of ecological sucession, put to data-driven music."
-          link="forest"
         />
         <Thumbnail
           :img="require('@/assets/img/gan/doublesizebush.webm')"
@@ -296,6 +296,7 @@ body {
   /* background: #000; */
   /* color: #669; */
   /* color: #db5f04; */
+  // font-size: 3px;
   text-align: center;
 }
 

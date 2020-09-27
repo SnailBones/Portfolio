@@ -1,7 +1,7 @@
 <template>
   <div class="project">
     <h1>A Tree Falls: The Musical</h1>
-    <h3>An interactive ecology sim with a data-driven soundtrack</h3>
+    <h3>Interactive ecology sim with a data-driven soundtrack</h3>
     <div class="carousel">
       <gallery
         loop
@@ -46,29 +46,29 @@
           <source :src="require('@/assets/img/forest/forest.webm')" type="video/mp4" />
         </video>
       </div>
-      <p><i>A Tree Falls</i> is an exploratory game inspired by John Conway's Game of Life and the writings of Bruno Latour, with the goal of providing an experience of direct interaction with an ecosystem, compressing space, time, and power. The ecosystem is a northern forest dominated by two species of trees. In undisturbed stands, spruce dominates, but when trees are destroyed by fire (created with the mouse in this simulation), birch quickly colonizes the disturbed area. Too much or too little disturbance and one species goes extinct, but in moderation they coexist in perpetuity.</p>
-      <p>Tree survival, growth, and spread depends on available water in the tree's cell. Water travels between cells through convection, simulating competition between the trees' roots, and giving a competetive advantage to the hardier spruce. Water flows downhill, creating microclimates at different elevations and reshaping the terrain through erosion and deposition.</p>
+      <p>Inspired by John Conway's Game of Life and the writings of Bruno Latour, <i>A Tree Falls</i> is an exploratory game that offers the experience of direct interaction with an ecosystem, compressing space, time, and power. The ecosystem is a northern forest dominated by two species of trees. In undisturbed stands, spruce dominates, but when trees are destroyed by fire (created with the mouse in this simulation), birch quickly colonizes the disturbed area. Too much or too little disturbance and one species is extirpated, but in moderation they coexist.</p>
+      <p>Tree survival, growth, and reproduction depend on available water in the tree's cell. Water travels between cells through convection, simulating competition between the trees' roots, and giving a competetive advantage to the more drought-tolerant spruce. Water flows downhill, creating microclimates at different elevations and reshaping the terrain through erosion and deposition.</p>
       <p>
         The game also serves as an experiment in conveying information through sound.
-        Trees in different processes (growing, dying, burning, and sprouting) produce sounds. Pitch and timbre are determined by the number of each species in each process. Quantized to different scales to sound pleasant to the human ear, the sounds of the forest produce a symphony of ever-changing states. Repeating patterns emerging in the music indicatie cycles and patterns in the simulation.
+        Continuously playing sounds represent trees in different processes (growing, dying, burning, and sprouting). Pitch and timbre are determined by the number of each species in each process. Quantized to different scales to sound pleasant to the human ear, the sounds of the forest produce a symphony of ever-changing states. Repeating patterns in the music correspond to cycles in the simulation.
       </p>
       <!-- <p>As an experimental feature, a settlement can be created with a click. Settlements consume water for agriculture, but they also require trees for construction in order to spread. As a result, they tend to create farm-like cells where birch trees live out an expediated lifecycle.</p> -->
+      <p>
+        The interface is in the open source
+        <span class="link">
+          <a href="https://godotengine.org/">Godot Engine</a>
+        </span>
+        and the simulation in C++.
+      </p>
+      <p>
+        <i>A Tree Falls</i> began as a project for a course in Computational Ecology at UNM. 
+      </p>
       <p>
         <span class="link">
           <a href="https://ailanthus.itch.io/forest">Download game</a>
         </span>
       </p>
       <p></p>
-            <p>
-        <i>A Tree Falls</i> began as a project for a course in Computational Ecology at UNM. 
-      </P>
-      <p>
-        The interface is in the open source
-        <span class="link">
-          <a href="https://godotengine.org/">Godot Engine</a>,
-        </span>
-        and the simulation in C++.
-      </p>
       <p>
         <span class="link">
           <a href="https://github.com/SnailBones/CellForest">Source code</a>
