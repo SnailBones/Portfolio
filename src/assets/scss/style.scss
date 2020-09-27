@@ -1,11 +1,54 @@
 // Variables
 
-// TODO: download font locally
+// TODO: download fonts locally
 // @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300i");
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:300");
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:300i");
 
-$font-size: 16px;
+
+// @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:600&display=swap');
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url("~@/assets/fonts/MontserratAlternates-SemiBold.ttf");
+  // 
+  // src: url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:600&display=swap');
+  ;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("~@/assets/fonts/Montserrat-Light.ttf");
+  font-weight: 300;
+
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("~@/assets/fonts/Montserrat-LightItalic.ttf");
+  ;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("~@/assets/fonts/Montserrat-Bold.ttf");
+  ;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("~@/assets/fonts/Montserrat-MediumItalic.ttf");
+  ;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+$font-size: 28px;
 $font-size-title: 24px;
 $font-size-large: 18px;
 $font-size-medium: 14px;
@@ -19,15 +62,11 @@ sans-serif;
 
 $color-light: #fbfbfb;
 $color-light-muted: #e6e6ef;
-$color-blue: #243b91;
-$color-orange: #f8b200;
-$color-red: #c51d00;
-$color-gray-text: #96a2a0;
+$color-blue: #9454ff;
 $color-dark: #181a20;
-$color-sidebar-text: #d8f3f2;
-$color-dark-blue: #42569c;
-$color-bold-blue: #243b91;
-$color-control-gray: #4a4a53;
+$color-orange: #ee6605;
+$color-gold: #d48c0e;
+$color-green: #54ff06;
 
 // Import BootstrapVue
 @import "~bootstrap/scss/bootstrap.scss";
@@ -42,10 +81,113 @@ $color-control-gray: #4a4a53;
 // Globals
 
 a {
-  color: yellow;
+  text-decoration: none;
+  color: $color-gold;
+  color: $color-blue;
+  transition: color .2s;
 
   &:hover {
-    color: white;
+    color: $color-light;
+    text-decoration: none;
+  }
+}
+
+.link {
+  height: 44px;
+  margin: 30px 0;
+
+  a {
+    position: relative;
+
+
+    &:hover {
+      color: $color-light;
+      text-decoration: none;
+    }
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      transition: transform .5s ease;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: $color-green;
+      transform: scaleX(0);
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      transition: transform .5s ease;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: $color-green;
+      transform: scaleX(0);
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.mail {
+  height: 44px;
+  margin: 30px 0;
+
+  a {
+    position: relative;
+
+
+    &:hover {
+      color: $color-light;
+      text-decoration: none;
+    }
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      transition: transform .5s ease;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 2px;
+      background: $color-green;
+      transform: scaleX(0);
+      transform-origin: top right;
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      transition: transform .5s ease;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: $color-green;
+      transform: scaleX(0);
+      transform-origin: top left;
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+    }
+
   }
 }
 
@@ -60,7 +202,7 @@ body {
   font-size: $font-size;
   font-family: $font-family;
   overflow: visible; // overflow: hidden;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   // overflow-x: scroll;
 
   #app {
@@ -73,7 +215,8 @@ body {
   }
 
   .project {
-    margin: 94px;
+    // margin: 94px;
+    padding: 94px;
   }
 
   p {

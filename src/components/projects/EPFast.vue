@@ -30,35 +30,48 @@
         A visualization and user interface for Argonne National Lab's EPFast
         software. EPFast is a simulation of cascading disruptions to the
         electric power system and the resulting fragmentation of the grid.
+        In this case, the disruption is a hurricane affecting the eastern interconnect, the interconnected circuit stretching from the Rocky Mountains to the
+        Atlantic ocean. The data and visualization covers three affected components:
       </p>
+      <div class="imageContainer">
+        <img src="@/assets/img/epfast/closekey.png" />
+      </div>
       <p>
-        This demonstration dataset is the eastern interconnect, one complex
-        connected electric circuit stretching from the Rocky Mountains to the
-        Atlantic ocean. The simulation data includes electric buses, branches,
-        and "islands."
-      </p>
-      <p>
-        <i>Buses</i> (graphic nodes) include
+        <i>Buses</i>, or nodes, include
         <i>generators</i>
         (i.e. power plants),
         <i>loads</i>
         (i.e. residential or commerical consumers of electricity) and
         transformers.
       </p>
+      <div class="imageContainer">
+        <img src="@/assets/img/epfast/lines.png" />
+      </div>
       <p>
-        <i>Branches</i>
-        (graphic edges) represent power lines connecting the buses to create the
+        <i>Branches</i>,
+        represent power lines connecting the buses to create the
         electric grid.
       </p>
-
+      <div class="imageContainer">
+        <img src="@/assets/img/epfast/islands.png" />
+      </div>
       <p>
-        Visualizing islands was the biggest visualization challenge of the
-        project. By iterating through several prototypes and experimenting with different algorithms, I came up with a
-        solution to reduce island intersection and misleading areas. Working closely with my team, I
-        developed the prototype into a final visualization tool to deliver to
-        Argonne National Labs.
+        <i>Islands</i>
+        are groups of buses that have become isolated from the rest of the grid through disruptions of lines. Disruptions tend to cascade through the grid, forming a large number of islands. Islands can be fully powered, fully outaged, or partially outaged. Islands are visualized as polygons in their approximate area, and selecting an island highlights its lines, pproviding insight into its structure.
       </p>
+      <div class="imageContainer">
+        <img src="@/assets/img/epfast/islands-lines.png" />
+      </div>
+
+      <p>Visualizing islands was a complex task: they needed to be intuitive enough for nontechnical users to interact with and understand, but provide the neccesary complexity to inform decisions. By iterating through several prototypes and experimenting with different algorithms, I developed a solution to reduce island intersection and misleading areas.</p>
+      <div class="imageContainer">
+        <img src="@/assets/img/epfast/heatmap.png" />
+      </div>
+      <p>Another challenge was the large scale of the data, which contains over 10,000 nodes. At larger views, we smoothly transition the node icons into a heatmap that provides insight into locations where the most generation and load has been lost.</p>
     </div>
+    <h2 class="link">
+      <router-link to="/">Back</router-link>
+    </h2>
   </div>
 </template>
 
@@ -98,7 +111,7 @@ export default {
           title: "Nodes",
           href: require("@/assets/img/epfast/nodes.mp4"),
           type: "video/mp4",
-          poster: require("@/assets/img/epfast/nodes.mp4")
+          poster: require("@/assets/img/epfast/closekey.png")
         },
         {
           title: "Heat Map",
@@ -119,7 +132,7 @@ export default {
           // "Islands are independent micro-grids following the disaster simulation",
           href: require("@/assets/img/epfast/islands.mp4"),
           type: "video/mp4",
-          poster: require("@/assets/img/epfast/island.png")
+          poster: require("@/assets/img/epfast/island-icon.png")
         }
       ],
       index: null
@@ -185,7 +198,18 @@ video {
     background-size: auto;
   }
 }
+
+.imageContainer {
+  margin: 2em 0 2em 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  // width: 680px;
+  img {
+    width: 100%;
+  }
+}
 p i {
-  font-weight: bolder;
+  font-weight: 400;
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <TreeCanvas id="tree-background" v-bind:gap="15" :width="10" :height="10" />
-    <div class="underbar d-flex p-5 flex-wrap justify-content-around">
-      <div id="header-container">
-      </div>
+    <!-- <div class="underbar d-flex p-5 flex-wrap justify-content-around"> -->
+    <!-- <div id="header-container"> -->
+    <!-- </div> -->
 
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 

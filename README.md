@@ -1,5 +1,13 @@
 # my-site
 
+## Helpful commands:
+
+ssh root@104.248.65.121
+
+cd /var/www/html/Vue    
+
+
+
 ## Project setup
 ```
 npm install

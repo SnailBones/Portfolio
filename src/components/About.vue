@@ -1,13 +1,16 @@
 <template>
-  <div class="home">
-    <div class="underbar d-flex p-5 flex-wrap justify-content-around">
-      <div id="main">
-        <!-- <h1 class="signature"> -->
-        I'm a creative developer based in Albuquerque, NM.
-        <!-- I believe in interactive design as a tool for experience and understanding. -->
-        <!-- In other words, I make things that inspire wonder and inform. -->
-        <!-- I like to make things. What sort of things? These sorts: -->
-        <!-- <ul>
+  <!-- <div class="main"> -->
+  <div class="bottom">
+    <!-- <h1 class="signature"> -->
+    <p>Hi! I'm Aidan.</p>
+    <br />
+    <p>
+      I'm a creative developer based in Albuquerque, NM.
+    </p>
+    <!-- I believe in interactive design as a tool for experience and understanding. -->
+    <!-- In other words, I make things that inspire wonder and inform. -->
+    <!-- I like to make things. What sort of things? These sorts: -->
+    <!-- <ul>
             <li>
               <router-link to="/code">Interactive</router-link>things
             </li>
@@ -18,67 +21,39 @@
               Things that tell a
               <router-link to="/words">story</router-link>
             </li>
-        </ul>-->
-        <p>
-          I write
-          <router-link to="https://github.com/SnailBones">code</router-link>. I write
-          <a href="https://medium.com/@snailbones">words</a>. I make
-          <router-link to="/">other stuff</router-link>.
-        </p>
-        <p>
-          I also really like
-          <a href="https://www.inaturalist.org/people/ailanthis">plants</a>.
-        </p>
-        <p>
-          <a href="mailto:aidhendrickson@gmail.com">Let's make something together!</a>
-          <!-- </h1> -->
-        </p>
-        <p></p>
-      </div>
-      <!-- <ul>
+    </ul>-->
+    <p>I try to make things that help people learn while they're having fun.</p>
+    <p>
+      These things are often
+      <span class="link">
+        <a href="https://github.com/SnailBones">code</a>
+      </span>, sometimes
+      <span class="link">
+        <a href="https://medium.com/@snailbones">words</a>
+      </span>, and occasionally some
+      <span class="link">
+        <router-link to="/" v-scroll-to="'.gallery'">other stuff</router-link>
+      </span>.
+    </p>
+    <p>
+      I'm a big fan of
+      <span class="link">
+        <a href="https://www.inaturalist.org/observations/29496000">plants</a>
+      </span>.
+    </p>
+    <br />
+    <p class="mail">
+      Want to
+      <a href="mailto:aidhendrickson@gmail.com">make something together?</a>
+      <!-- </h1> -->
+    </p>
+    <p></p>
+  </div>
+  <!-- <ul>
       <li class = "smallfade"><a>projects</a></li>
       <li class = "smallfade"><a>about</a></li>
-      </ul>-->
-      <div class="container">
-        <div class="d-flex justify-content-around">
-          <div>
-            <a class="smallfade img-container" href="https://github.com/SnailBones">
-              <img src="@/assets/link-icons/GitHub-Mark-Light-64px.png" />
-            </a>
-          </div>
-          <div>
-            <a class="smallfade img-container" href="https://codepen.io/snailbones">
-              <img src="@/assets/link-icons/codepenlogo.png" />
-            </a>
-          </div>
-          <!-- <div>
-            <a
-              class="smallfade img-container"
-              href="https://www.linkedin.com/in/a-hendrickson"
-            >
-              <img width="64px" src="@/assets/link-icons/linkedin.png" />
-            </a>
-          </div>-->
-          <div>
-            <a class="smallfade img-container" href="https://medium.com/@snailbones">
-              <img width="64px" src="@/assets/link-icons/medium.png" />
-            </a>
-          </div>
-          <div>
-            <a class="smallfade img-container" href="https://ailanthus.itch.io/">
-              <img width="64px" src="@/assets/link-icons/itch.png" />
-            </a>
-          </div>
-          <!-- <div class="col">
-          itch
-        </div>
-        <div class="col-sm">
-          inaturalist
-          </div>-->
-        </div>
-      </div>
-    </div>
-  </div>
+  </ul>-->
+  <!-- </div> -->
 </template>
 
 <script>
@@ -121,30 +96,18 @@ body {
   text-align: center;
 }
 
-.underbar {
-  width: 100%;
-  /* height: 100%; */
-  position: absolute;
-  bottom: 0;
-  /* bottom: 20%; */
-  /* overflow-y: scroll; */
+.main {
+  position: relative;
 }
 
-.signature {
-  font-style: italic;
-  font-weight: lighter;
-  font-size: 1rem;
-  box-shadow: 0 0 32px 32px #181a20;
-  background: #181a20;
-  /* display: inline-block; */
-  border-radius: 12px;
-  word-wrap: break-word;
-  margin: 12px;
-  display: inline-block;
-  /* bottom: 64px; */
-  /* position: absolute; */
-  /* left: 0; */
-}
+/* .bottom {
+  width: 100%;
+  /* height: 100%; */
+position: absolute;
+bottom: 0;
+/* bottom: 20%; */
+/* overflow-y: scroll; */
+/* }  */
 
 .smallfade {
   /* box-shadow: 0 0 32px 32px #181a20; */

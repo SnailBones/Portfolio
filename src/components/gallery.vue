@@ -25,7 +25,9 @@ import "blueimp-gallery/css/blueimp-gallery.min.css";
 // import "blueimp-gallery/css/blueimp-gallery.css";
 // import "blueimp-gallery/css/blueimp-gallery-indicator.css";
 // import "blueimp-gallery/css/blueimp-gallery-video.css";
-import "blueimp-gallery/js/blueimp-gallery-repeating-clip.js";
+// import "blueimp-gallery/js/blueimp-gallery-repeating-clip.js";
+import "blueimp-gallery/js/blueimp-gallery.js";
+import "blueimp-gallery/js/blueimp-gallery-video.js";
 // import "blueimp-gallery/js/blueimp-gallery-fullscreen.js";
 import blueimp from "blueimp-gallery/js/blueimp-gallery.js";
 
@@ -89,6 +91,7 @@ export default {
     if (this.carousel) {
       this.open();
     }
+    console.log("mounited! this is")
   },
 
   destroyed() {
@@ -119,8 +122,8 @@ export default {
             this.$emit("onslideend", { index, slide }),
           onslidecomplete: (index, slide) =>
             this.$emit("onslidecomplete", { index, slide }),
-          onclose: () => this.$emit("close"),
-          onclosed: () => this.$emit("onclosed")
+          onclose: () => {this.$emit("close"); this.$emit("play")},
+          onclosed: () => {this.$emit("onclosed"); this.$emit("play"); }
         },
         this.options
       );
