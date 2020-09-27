@@ -14,18 +14,18 @@ import VueScrollTo from "vue-scrollto"
 Vue.use(BootstrapVue);
 // Vue.use(VueScrollTo)
 Vue.use(VueScrollTo, {
-     container: "body",
-     duration: 1500,
-     easing: "ease",
-     offset: 0,
-     force: true,
-     cancelable: true,
-     onStart: false,
-     onDone: false,
-     onCancel: false,
-     x: false,
-     y: true
- })
+  container: "body",
+  duration: 3000,
+  easing: "ease",
+  offset: 0,
+  force: true,
+  cancelable: true,
+  onStart: false,
+  onDone: false,
+  onCancel: false,
+  x: false,
+  y: true
+})
 
 // import "mapbox-gl/dist/mapbox-gl.css";
 
