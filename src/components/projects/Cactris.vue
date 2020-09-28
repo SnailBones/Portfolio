@@ -10,13 +10,15 @@
           </video>
       </div>
 
-        <p><i>Cactris</i> is a tile-matching puzzle game projected on a wall, in which sensors allow a player to interact with virtual balls. The player moves their body to push, lift, and toss balls into place, forming towering cacti. Connecting three matching colors scores points, but if a cactus grows to the top of the wall, the game is over.
+        <p><i>Cactris</i> is a tile-matching puzzle game projected on a wall, in which sensors allow a player to interact with virtual balls. The player moves their body to push, lift, and toss balls into place, forming towering cacti. Connecting three matching colors scores points, but if a cactus grows to the top of the wall, the game is over. Cactris can be played solo or by a cooperating team.
         </p>
-        <p>Challenges in development included developing reliable physics given interactions from the depth data, a shader pass to create a 3D shadow effect, designing for accessibliity to people of all ages, sizes, and abilities.
+        <p>Setting out to make a competetive virtual ball game, I observed that players instictively swung and kicked at fast-moving balls with fast-paced hits. They moved with such speed such speed that the sensor framerate could not precisely track their motion, and balls shot off in unexpected directions. In response, I set out to build a game that encouraged slow, precise movements, abandoning the action genre for a more creative and meditative&mdash;but equally challenging&mdash;puzzle experience.
+        </p>
+        <p>Challenges in development included developing reliable physics nteractions with depth data, a shader pass to create a 3D shadow effect, and designing for accessibliity to people of all ages, sizes, and abilities.
         </p>
         <p><i>Cactris</i> can be played at
             <span class="link">
-            <a href="https://electricplayhouse.com/">Electric Playhouse</a>.
+            <a href="https://electricplayhouse.com/play">Electric Playhouse</a>.
             </span>
         </p>
         <div class="imageContainer">
@@ -24,7 +26,7 @@
             <source :src="require('@/assets/img/ball/rain_collector.mp4')" type="video/mp4" />
           </video>
        </div>
-       <p> In this game, players sort balls according to their color. Balls in the wrong goal return spiky, and spiky balls in the wrong goal take away the player's health.</p>
+       <p> A variant. In this game, players sort balls according to their color. Balls in the wrong goal return again in spiky form, and spiky balls in the wrong goal take away the player's health.</p>
     </div>
 
 

@@ -12,6 +12,7 @@ import ExplOcean from "@/components/projects/ExplOcean"
 import WhatTreesWere from "@/components/projects/WhatTreesWere"
 import CellForest from "@/components/projects/CellForest"
 import Worms from "@/components/projects/Worms"
+import Run from "@/components/projects/Run"
 import OKeeffe from "@/components/projects/OKeeffe"
 import Painless from "@/components/projects/Painless"
 import Cactris from "@/components/projects/Cactris"
@@ -68,6 +69,10 @@ export default new Router({
     {
       path: "/project/worms",
       component: Worms
+    },
+    {
+      path: "/project/run",
+      component: Run
     },
     {
       path: "/project/okeeffe",
