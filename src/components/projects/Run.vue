@@ -7,22 +7,43 @@
 			 </video>
 		</div>
 		<div class="info">
-			<p><i>Prism Escape</i>, formerly known as <i>Space Runner</i>, is an endless racing game played with physical motion. The player stands in a three-walled room and moves side to side to dodge virtual obstacles as the walls depict the player racing forward through the game world.
+			<p>In September 2019, I started work at <i>Electric Playhouse</i>, an entertainment company building games that merge the digital and physical world, powered by sensors and projectors. One of my first tasks was expanding the company’s selection of games for two and three-walled “pods.” <i>Prism Escape</i>&mdash;formerly Space Runner&mdash;was the result, my first released game and the first game at Electric Playhouse displaying a virtual 3D environment.
 			</p>
 			<p>
-			As the player follows the pathway of boosts, they gain speed; hitting a rectangular prism slows them down. The goal is to make it as far as possible before time runs out, gaining bonus time by collecting clock pickups. Difficulty increases as the player gets further, resulting in an easy-to-play but hard-to-master game that appeals to competetive players vying for the high score.
+			Accessibility is a must at Electric Playhouse, especially to a clientele beyond traditional gamers. Smartphone games and classic video games are the most broadly recognized games, and I drew from their tropes to build a design language that could be broadly recognized, giving players familiar cues to navigate a novel interface. In the case of Prism Escape, I adapted the popular endless runner and racing genres.
 			</p>
-			<p>This was the first game at Electric Playhouse to depict an apparently 3D environment. The existing graphics pipeline supported only 2D, so I created the game's Trompe-l'œil effect by implementing the math to render perspective in both HTML canvas and GLSL shaders.
+			<p>
+			In endless runner and racing games, the players guides a character around obstacles as far or as fast as they can, using a joystick, arrow keys or swipes. In a game with sensor data as input, there is no character as such. The closest that we have is a depth mask, a texture created from sensor data representing the player’s body.This isn’t one discrete position, it’s a large array of positions where each one is either a 1--something here--or a 0--empty. To detect a collision with a shape, we need to count the pixels where the depth mask intersects the shape. Unfortunately, individually counting pixels is far too slow in practice.
 			</p>
-			<p>At Electric Playhouse, it is important for games to be accessible to all ages and abilities. As one of the facility's most physically demanding games, Prism Escape provided a unique challenge in game design. In my first draft of the game, speed increased at a constant rate. This created a constant difficulty that was easy for some players, but insurmountably challenging for others. Through experimentation and close observation, I discovered that adjusting the game's speed in response with the player's skill level&mdash;represented by how many boosts they collect&mdash;allows first-time players to easily learn the game's mechanics without sacrificing the fun of competetive showoffs. 
+			<p>
+			The game logic runs in JavaScript on the CPU, and depth is manipulated in GLSL shaders--harnessing GPU parallelization to perform intense image processing operations that would otherwise bring the computer to a halt. Despite the essential performance improvements of shaders, reading data from the GPU to the CPU is a slow operation and critical bottleneck. Previous games at Electric Playhouse featured circular “colliders”, implemented through a Euclidean distance transform and sampling at a single point. But for Prism Escape, I needed rectangular colliders of different sizes. And for direct hits to have a larger effect than grazers, the colliders required unprecedented precision. <i>How can I accurately judge the degree of collision without sacrificing the game's performance?</i>
 			</p>
-			<p> Likewise, a "limited lives" mechanic in early drafts proved frustruating. Unlike in traditional videogames, where a player's character has a clear location and boundaries, the character in Prism Escape is an area of any possible shape that the human body&mdash;or bodies&mdash; can form, and it is hard to meaningfully judge its location as it rapidly transforms. Grazing an arm or foot against a prism often triggered a loss, which felt understandably unfair. Given the soft nature of position data, my solution was to replace the hard penalty with a soft penalty. A direct hit now slows the player down significantly, while a graze only slightly, and the lives are replaced with a clock. Losing is percieved as predictable and fair, while the clock also heightens suspense. The slowdown mechanic combines with sound effects to add an illusion of tactile weight to the prisms.
+			<p>
+				Likewise, a "limited lives" mechanic in early drafts proved frustrating. Unlike traditional video games where a player's character has a clear location and boundaries, the character in Prism Escape is an area of any possible shape that the human body&mdash;or bodies&mdash; can form, and it is hard to meaningfully judge its location as it rapidly transforms. Grazing an arm or foot against a prism often triggered a loss, which felt understandably unfair. Given the soft nature of position data, my solution was to replace the hard penalty with a soft penalty. A direct hit now slows the player down significantly, while a graze only slightly, and the lives are replaced with a clock. Losing is percedved as predictable and fair, while the clock also heightens suspense. The slowdown mechanic combines with sound effects to add an illusion of tactile weight to the prisms.
 			</p>
-			<p> The need to tell the difference between large impacts and grazes introduced a technical challenge: How could I accurately judge the degree of collision without sacrificing the game's performance? Individually checking pixels for collision introduced far too much latency, so I developed a custom shader algorithm to perform this calculation more efficiently on the GPU. Sensor data is rendered to a texture at the location of a collision, which is repeatedly downsampled onto smaller textures. GPU optimization makes this a highly efficient operation with no loss of precision. Once the data has been written on to a texture with dimensions of one by one, the CPU reads the texture, returning the degree of collision across the total rectangle from the value of a single pixel. This allows the game to operate with minimal latency and a framerate of 60 fps.
+			<p>
+				I developed a custom shader solution to this problem, taking advantage of the fact that GPU hardware is optimized for resampling textures. My algorithm cuts out the depth mask in the area of the prism, then repeatedly resamples this texture onto smaller textures. Hardware optimization makes this a fast operation with no loss of precision. Once the data has been written on to a texture containing only a single pixel, the CPU reads this pixel, its value representing the average degree of collision across the entire rectangle. This optimization allows for extremely accurate collision detection with minimal latency and a framerate of 60 fps.
+
 			</p>
-			<p>Early iterations of the game had only procedurally generated graphics. Once gameplay was complete, I worked with artist Thomas Herrara to create a desert scene in the background.
+			<p>
+				An interesting technical challenge was creating the game’s Trompe-l'œil 3D effect in both HTML canvas and GLSL shaders. The company’s framework at the time did not support external libraries such as Three.js, so I had to code one-point perspective from scratch. Particularly challenging was the cast shadow seen at the base of the player’s depth. I later rewrote my 3D framework and collision system as modules within a reusable library, allowing for quick implementation by my team to build performant and feature-rich games.    
 			</p>
-			<p><i>King of The Worms</i> can be played at
+			<div class="imageContainer">
+        		<img src="@/assets/img/runner/goodsmallest.jpg" />
+      		</div>
+			<p>
+				This project also came with interesting design challenges.
+			</p>
+			<p>
+				At Electric Playhousel, it is critical for games to be accessible to all ages and abilities. As one of the most physically demanding games, Prism Escape provided a unique challenge in game design, so I implemented several equalizing features through experimentation and close observation. I broke away from a constantly increasing speed in initial drafts to have speed respond to the number of boosts the player collects, which correlates to skill. Overhead prisms provide a greater challenge to otherwise advantaged taller players. In effect, the game matches difficulty to the player’s skill level, allowing first-time players to easily learn the game's mechanics without sacrificing the fun of competitive “pinball wizards” and their spectators. 
+			</p>
+			<p>
+				Likewise, a "limited lives" mechanic in early drafts proved frustrating. Given the soft nature of the player’s position, my solution was to replace the hard penalty with a soft penalty. A direct hit now slows the player down significantly, while a graze only slightly, and a ticking down clock determines the end of the game, heightening suspense and adding a sense of predictability--and perceived fairness--to the end of the game.. The slowdown mechanic combines with shader effects and sound effects by sound designer Chris Alires to add an illusion of tactile weight to the prisms.
+			</p>
+			<p>
+				Most graphics are procedurally generated. Once gameplay was complete, I worked with artist Thomas Herrara to create a desert scene in the background.     
+			</p>
+			<p><i>Prism Escape</i> can be played at
 					<span class="link">
 					<a href="https://electricplayhouse.com/play">Electric Playhouse</a>.
 					</span>
