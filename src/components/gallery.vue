@@ -91,7 +91,6 @@ export default {
     if (this.carousel) {
       this.open();
     }
-    console.log("mounited! this is")
   },
 
   destroyed() {

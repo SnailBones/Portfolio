@@ -8,8 +8,8 @@ module.exports = {
     'eslint:recommended'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-mixed-spaces-and-tabs': 'warn',
     'no-unused-vars': 'off',
     'no-constant-condition': 'off',    
@@ -19,7 +19,6 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'vue/no-mutating-props': 'off',
     'vue/require-prop-type-constructor': 'off'
-
 
   },
   parserOptions: {
