@@ -10,28 +10,48 @@
           </video>
       </div>
 
-        <p><i>Cactris</i> is a tile-matching puzzle game projected on a wall, in which sensors allow a player to interact with virtual balls. The player moves their body to push, lift, and toss balls into place, forming towering cacti. Connecting three matching colors scores points, but if a cactus grows to the top of the wall, the game is over. Cactris can be played solo or by a cooperating team.
+        <p><i>Cactris</i> is a match-three puzzle game projected on a wall, in which players use their bodies to interact with virtual balls. Sensors pick up players' positions as they catch, push, and toss balls. When a ball collides with the ground, it grows spines and transforms into a fixed cactus pad. A cutball colliding with a cactus joins as another pad. If a cactus grows to the top of the wall, the game is over. Players can eliminate pads and score points by combining three or more pads of the same color. Cactris can be played solo or by a cooperating team.
         </p>
-        <p>Setting out to make a competetive virtual ball game, I observed that players instictively swung and kicked at fast-moving balls with fast-paced hits. They moved with such speed such speed that the sensor framerate could not precisely track their motion, and balls shot off in unexpected directions. In response, I set out to build a game that encouraged slow, precise movements, abandoning the action genre for a more creative and meditative&mdash;but equally challenging&mdash;puzzle experience.
+        <p> I built Cactris by developing a 2D physics engine and a series of shader passes that transforms sensor depth data into physics forces. First, depth data is transformed into the appropriate plane and a step functon applied, creating a "shadow" of players in front of the wall. Then the shadow is blurred to create a smooth gradient and reduce noise, then a derivative pass provides the direction and magnitude of change. Then at every frame we read the texture at each ball center and apply the value as a force to the ball. In effect, balls are repelled by people, which creates a sense of solidness and physical interaction. This approach (and the library supporting it) is shared in by game
+          <span class="link">
+            <router-link to="/project/worms">King of the Worms</router-link>
+          </span>
+        , though in that game the vector is applied in the other direction, so objects are attracted to depth instead of repelled.
         </p>
-        <p>Challenges in development included developing reliable physics nteractions with depth data, a shader pass to create a 3D shadow effect, and designing for accessibliity to people of all ages, sizes, and abilities.
+        <p>I developed Cactris through an iterative process of trial and experiment. After building the interactive physics egine, I initially sought to make a competetive two-player ball game, perhaps a digital version of volleyball or basketball. Prototypes for this game faced an obstacles: when players encountered a fast-moving ball, they instictively swung and kicked at it with fast strikes. Unfortunately, sensors running at 30fps, proved inadequate for capturing fast motions, resulting in balls moving in unexpected directions and player frustration.
+        </p>
+        <p> Given this limitation, I set out to build a game that encourages slow, precise movements, setting aside the fast-paced sports theme for a more creative and meditative puzzle experience. First, I adressed ball movement. By adding high drag, balls felt lighter and balloon-like, encouraging gentler touches that wouldn't run into the framerate issue.
+        </p>
+        <p>Once ball interactions felt as fun and reliable as possible, I turned to gameplay to match the now light, floaty balls. In this early prototype, players sort balls according to their color. Balls in the wrong goal return again in spiky form, and spiky balls in the wrong goal damage the player.</p>
+        <div class="imageContainer">
+          <video autoplay preload loop muted>
+            <source :src="require('@/assets/img/ball/rain_collector.mp4')" type="video/mp4" />
+          </video>
+       </div>
+       <p> This mechanic proved confusing to follow and presented accesibility issues for short players or those without full color vision.
+       </p>
+       <p> Looking to draw from visual languages that visitors would be familiar with, I turned to tile-matching puzzle games for inspiration. Tile-matching games are popular and recognizable, and include both the
+            <span class="link">
+              <a href="https://en.wikipedia.org/wiki/Tetris_(Electronic_Arts)">best selling</a>
+            </span>
+            and the
+            <span class="link">
+              <a href="https://en.wikipedia.org/wiki/List_of_most-played_mobile_games_by_player_count">most played mobile game of all time</a>
+            </span>.
+        Importantly, the audience of this genre extends well beyond traditional "gamers," meaning that even visitors with little videogame experience cn recognize familiar mechanics. By grounding a novel interaction mechanism in broadly understood gameplay patterns, Cactris is accesibile to players of many ages and experiences.
+       </p>
+        <p> To improve accesibility to players without full color vision, I introduced distinct shapes inside of the balls. Final touches include bonus points for combos, harmonic sound effects on ball interactions, and a subtle perspective background suggesting depth.
         </p>
         <p><i>Cactris</i> can be played at
             <span class="link">
             <a href="https://electricplayhouse.com/play">Electric Playhouse</a>.
             </span>
         </p>
-        <div class="imageContainer">
-          <video autoplay preload loop muted>
-            <source :src="require('@/assets/img/ball/rain_collector.mp4')" type="video/mp4" />
-          </video>
-       </div>
-       <p> A variant. In this game, players sort balls according to their color. Balls in the wrong goal return again in spiky form, and spiky balls in the wrong goal take away the player's health.</p>
     </div>
 
 
     <h2 class="link">
-      <router-link to="/">Back</router-link>
+      <router-link to="/">Home</router-link>
     </h2>
   </div>
 </template>

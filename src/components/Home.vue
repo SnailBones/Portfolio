@@ -89,7 +89,7 @@
 				<Thumbnail
 					:img="require('@/assets/img/ball/cactris.mp4')"
 					title="Cactris"
-					info="A tile matching puzzle game played with your body."
+					info="A match-three puzzle game played with your body."
 					link="cactris"
 					zoomOut="true"
 				/>

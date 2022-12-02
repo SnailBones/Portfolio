@@ -7,10 +7,10 @@
 			 </video>
 		</div>
 		<div class="info">
-			<p>In September 2019, I started work at <i>Electric Playhouse</i>, an entertainment company building games that merge the digital and physical world, powered by sensors and projectors. One of my first tasks was expanding the company’s selection of games for two and three-walled “pods.” <i>Prism Escape</i>&mdash;formerly Space Runner&mdash;was the result, my first released game and the first game at Electric Playhouse displaying a virtual 3D environment.
+			<p>In September 2019, I started work at <i>Electric Playhouse</i>, an entertainment company building games that merge the digital and physical world, powered by sensors and projectors. One of my first tasks was expanding the company’s selection of games for two and three-walled “pods.” <i>Prism Escape</i>&mdash;also known as Space Runner&mdash;was the result, my first released game and the first game at Electric Playhouse displaying a virtual 3D environment.
 			</p>
 			<p>
-			Accessibility is a must at Electric Playhouse, especially to a clientele beyond traditional gamers. Smartphone games and classic video games are the most broadly recognized games, and I drew from their tropes to build a design language that could be broadly recognized, giving players familiar cues to navigate a novel interface. In the case of Prism Escape, I adapted the popular endless runner and racing genres.
+			Accessibility is critical at Electric Playhouse, which seeks to create games for everyone, not just traditional "gamers." Smartphone games and classic video games are the most broadly recognized games, and I drew from their tropes to build a design language that could be broadly recognized, giving players familiar cues to navigate a novel interface. In the case of Prism Escape, I adapted the popular endless runner and racing genres.
 			</p>
 			<p>
 			In endless runner and racing games, the players guides a character around obstacles as far or as fast as they can, using a joystick, arrow keys or swipes. In a game with sensor data as input, there is no character as such. The closest that we have is a depth mask, a texture created from sensor data representing the player’s body.This isn’t one discrete position, it’s a large array of positions where each one is either a 1--something here--or a 0--empty. To detect a collision with a shape, we need to count the pixels where the depth mask intersects the shape. Unfortunately, individually counting pixels is far too slow in practice.
@@ -35,13 +35,12 @@
 				This project also came with interesting design challenges.
 			</p>
 			<p>
-				At Electric Playhousel, it is critical for games to be accessible to all ages and abilities. As one of the most physically demanding games, Prism Escape provided a unique challenge in game design, so I implemented several equalizing features through experimentation and close observation. I broke away from a constantly increasing speed in initial drafts to have speed respond to the number of boosts the player collects, which correlates to skill. Overhead prisms provide a greater challenge to otherwise advantaged taller players. In effect, the game matches difficulty to the player’s skill level, allowing first-time players to easily learn the game's mechanics without sacrificing the fun of competitive “pinball wizards” and their spectators. 
+				At Electric Playhousel, it is critical for games to be accessible to all ages and abilities. As one of the most physically demanding games, Prism Escape provided a unique challenge in game design, so I implemented several equalizing features through experimentation and close observation. I broke away from a constantly increasing speed in initial drafts to have speed respond to the number of boosts the player collects, which correlates to skill. Overhead prisms provide a greater challenge to otherwise advantaged taller players. In effect, <i>the game matches difficulty to the player’s skill level</i> , creating a fun experience for first-time players and competitive “pinball wizards” alike.
 			</p>
 			<p>
 				Likewise, a "limited lives" mechanic in early drafts proved frustrating. Given the soft nature of the player’s position, my solution was to replace the hard penalty with a soft penalty. A direct hit now slows the player down significantly, while a graze only slightly, and a ticking down clock determines the end of the game, heightening suspense and adding a sense of predictability--and perceived fairness--to the end of the game.. The slowdown mechanic combines with shader effects and sound effects by sound designer Chris Alires to add an illusion of tactile weight to the prisms.
 			</p>
-			<p>
-				Most graphics are procedurally generated. Once gameplay was complete, I worked with artist Thomas Herrara to create a desert scene in the background.     
+			<p> While best played by one player at a time, Prism Escape has proven to be something of a spectator sport, drawing crowds and cameras. The physical agility encouraged, the suspense, flashy effects, and the parallax New Mexico-inspired scenery by artist Thomas Herrara make it almost as fun to watch as it is to play. Besides, you'll need to catch your breath after giving it a go!
 			</p>
 			<p><i>Prism Escape</i> can be played at
 					<span class="link">
@@ -50,7 +49,7 @@
 			</p>
 		</div>
 		<h2 class="link">
-			<router-link to="/">Back</router-link>
+			<router-link to="/">Home</router-link>
 		</h2>
 	</div>
 </template>

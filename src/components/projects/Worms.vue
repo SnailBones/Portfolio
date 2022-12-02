@@ -12,7 +12,7 @@
 		<div class="imageContainer">
 			<video autoplay preload loop muted>
 					<source :src="require('@/assets/img/worms/worms.mp4')" type="video/mp4" />
-			 </video>
+			</video>
 		</div>
 		<!-- <iframe width="1111" height="625" src="https://www.youtube.com/embed/7wngKZOYYDg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
@@ -27,7 +27,11 @@
 				<p>Play requires no controller or equipment. The only input is depth data from a series of sensors on the ceiling, and the movement of the worms is determined through shader calculations. This was the first game at Electric Playhouse that assigned players to moveable characters, and ensuring reliability proved a considerable challenge.
 				</p>
 				<p>
-				The worms follow the same basic mechanics as the balls in Cactris. While balls move away from bodies, worms move toward them. In both cases, depth data is blurred, the derivative is taken, the resulting texture acts as a "force" accelerating worms and balls. This texture is visualized as a subtle ring of color surrounding players as they walk across the game. A gaussian blur can be likened to the force of gravity in 2D space or as if players were standing on a trampoline. The membrane bends down where a player stands. The derivative operation converts the fabric's elevation into direction, and the worms roll downhill until they settle in a "pit" where a player is standing. In the classic snake game, a collision kills the player. In <i>King of The Worms</i>,  this mechanic discourages two players from getting too close together and ensures that each remains in control of their own worm while simultaneously providing for challenging and competetive play.
+				The worms following the behavior is implemented in much the same way as the balls in
+				<span class="link">
+					<router-link to="/project/cactris">Cactris</router-link>
+				</span>
+				. While balls move away from bodies, worms move toward them. In both cases, depth data is blurred, the derivative is taken, the resulting texture acts as a "force" accelerating worms and balls. This texture is visualized as a subtle ring of color surrounding players as they walk across the game. A gaussian blur can be likened to the force of gravity in 2D space or as if players were standing on a trampoline. The membrane bends down where a player stands. The derivative operation converts the fabric's elevation into direction, and the worms roll downhill until they settle in a "pit" where a player is standing. In the classic snake game, a collision kills the player. In <i>King of The Worms</i>,  this mechanic discourages two players from getting too close together and ensures that each remains in control of their own worm while simultaneously providing for challenging and competetive play.
 				</p>
 				<p>
 				Early tests of my tracking algorithm proved conceptually promising, but marginal in pratice due to limited sensor framerate and GPU-heavy texture operations with the large blur introducing the lion's share of delay. I wrote an optimized blur algorithm which, running on Electric Playhouse's GPUs, allowing the game to keep up with up to ten players. Under ideal conditions, worms sucessfully chase down players running at a full sprint.
@@ -45,7 +49,7 @@
 		</div> -->
 
 		<h2 class="link">
-			<router-link to="/">Back</router-link>
+			<router-link to="/">Home</router-link>
 		</h2>
 	</div>
 </template>
