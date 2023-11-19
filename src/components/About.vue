@@ -4,7 +4,7 @@
     <!-- <h1 class="signature"> -->
     <p class = "greeting">Hi there! I'm Aidan.</p>
     <p>
-      I'm a creative developer based in Albuquerque, NM.
+      I'm a software engineer and creative based in Albuquerque, NM.
     </p>
     <!-- I believe in interactive design as a tool for experience and understanding. -->
     <!-- In other words, I make things that inspire wonder and inform. -->

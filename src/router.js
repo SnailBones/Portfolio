@@ -16,6 +16,7 @@ import Run from "@/components/projects/Run"
 import OKeeffe from "@/components/projects/OKeeffe"
 import Painless from "@/components/projects/Painless"
 import Cactris from "@/components/projects/Cactris"
+import GlobeView from "@/components/projects/GlobeView"
 
 Vue.use(Router);
 
@@ -45,6 +46,10 @@ export default new Router({
       path: "/about",
       name: "about me",
       component: About
+    },
+    {
+      path: "/globe",
+      component: GlobeView
     },
     {
       path: "/project/grid",
