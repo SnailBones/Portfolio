@@ -1,22 +1,23 @@
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
-  configureWebpack: {
-    plugins: [
-      new ImageMinimizerPlugin({
+  chainWebpack: (config) => {
+    config.plugin("image-minimizer").use(ImageMinimizerPlugin, [
+      {
         minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
+          implementation: ImageMinimizerPlugin.sharpMinify,
           options: {
-            // Lossless optimization with custom option
-            // Feel free to experiment with options for better results
-            plugins: [
-              ["gifsicle", { interlaced: true }],
-              ["jpegtran", { progressive: true }],
-              ["optipng", { optimizationLevel: 5 }],
-            ],
+            encodeOptions: {
+              jpeg: {
+                quality: 50,
+              },
+              png: {
+                quality: 50,
+              },
+            },
           },
         },
-      }),
-    ],
+      },
+    ]);
   },
 };

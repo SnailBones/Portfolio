@@ -65,42 +65,6 @@ export default {
   data: function() {
     return {
       images: [
-        // require("@/assets/img/painless/set.jpg"),
-        // require("@/assets/img/epfast/zoom_nodes.mp4"),
-        // require("@/assets/img/epfast/nodes.mp4"),
-        // require("@/assets/img/painless/set.jpg"),
-        // {
-        //   title: "This doesn't go here",
-        //   href: require("@/assets/img/painless/set.jpg"),
-        //   type: "img/jpg",
-        //   poster: require("@/assets/img/painless/set.jpg")
-        // },
-        // {
-        //   title: "Model 1",
-        //   href: require("@/assets/img/museum/models/mini.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Model 2",
-        //   href: require("@/assets/img/museum/models/big.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Model 2",
-        //   // description: "Close up",
-        //   href: require("@/assets/img/museum/models/close.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Concept development: sunken labyrinth",
-        //   href: require("@/assets/img/museum/models/labside.jpg"),
-        //   type: "image/jpg"
-        // }
-        // {
-        //   title: "Concept development: sunken labyrinth",
-        //   href: require("@/assets/img/museum/models/labtop.jpg"),
-        //   type: "image/jpg"
-        // }
       ],
       index: null
     };

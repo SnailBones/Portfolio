@@ -150,7 +150,7 @@
 					info="A drama about technology, desire, and the wild west. Written and directed by me."
 				/> -->
 				<Thumbnail
-					:img="require('@/assets/img/lamplight/lamplight.mp4')"
+					:img="require('@/assets/img/lamplight/lamplight.webm')"
 					zoomOut="true;"
 					title="Lamplight"
 					info="A small videogame."
@@ -175,14 +175,6 @@
 							href="https://www.shadertoy.com/user/ailanthus"
 							style="color:white; font-family: Lobster,Tahoma,Arial; font-size: 36px"
 						>S</a>
-						<!-- <div>
-				<a
-					class="smallfade icon-container"
-					href="https://www.linkedin.com/in/a-hendrickson"
-				>
-					<img width="64px" src="@/assets/link-icons/linkedin.png" />
-				</a>
-						</div>-->
 						<div>
 							<a class="smallfade icon-container" href="https://medium.com/@snailbones">
 								<img width="64px" src="@/assets/link-icons/medium.png" />
@@ -210,34 +202,14 @@ import VueScrollTo from "vue-scrollto";
 
 import TreeCanvas from "@/components/TreeCanvas.vue";
 import Thumbnail from "@/components/Thumbnail.vue";
-import Project from "@/components/Project.vue";
 import About from "@/components/About.vue";
-
-// const ProjectMuseum = () => import("@/components/projects/Museum.vue");
-
-// import ProjectZero from "@/components/projects/Zero.vue";
-// import ProjectPlay from "@/components/projects/Play.vue";
-// import ProjectMuseum from "@/components/projects/Museum.vue";
-// import ProjectEPFast from "@/components/projects/EPFast.vue";
-
-// import Pictures from "@/components/Pictures.vue";
 
 export default {
 	name: "Home",
-	// props: {
-	//   msg: String
-	// },
 	components: {
-		// Home,
 		TreeCanvas,
 		Thumbnail,
-		Project,
 		About,
-		// ProjectZero,
-		// ProjectPlay,
-		ProjectMuseum: () => import("@/components/projects/Museum.vue"),
-		ProjectEPFast: () => import("@/components/projects/EPFast.vue")
-		// Pictures
 	},
 	methods: {
 		evolve: function(event) {
