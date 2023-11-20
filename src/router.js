@@ -1,30 +1,17 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/components/Home";
-import TreeCanvas from "@/components/TreeCanvas"
-import About from "@/components/About"
-import JustTrees from "@/components/JustTrees"
-
-// import Pictures from "@/components/Pictures"
-import EPFast from "@/components/projects/EPFast"
-import Museum from "@/components/projects/Museum"
-import ExplOcean from "@/components/projects/ExplOcean"
-import WhatTreesWere from "@/components/projects/WhatTreesWere"
-import CellForest from "@/components/projects/CellForest"
-import Worms from "@/components/projects/Worms"
-import Run from "@/components/projects/Run"
-import OKeeffe from "@/components/projects/OKeeffe"
-import Painless from "@/components/projects/Painless"
-import Cactris from "@/components/projects/Cactris"
-import GlobeView from "@/components/projects/GlobeView"
+import About from "@/components/About";
+import JustTrees from "@/components/JustTrees";
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [{
+  routes: [
+    {
       path: "/",
       name: "ai·lan·thus",
-      component: Home
+      component: Home,
     },
     {
       path: "/forest",
@@ -39,104 +26,57 @@ export default new Router({
       name: "Just some trees",
       component: JustTrees,
       meta: {
-        title: 'Just some trees',
-      }
+        title: "Just some trees",
+      },
     },
     {
       path: "/about",
       name: "about me",
-      component: About
+      component: About,
     },
     {
       path: "/globe",
-      component: GlobeView
+      component: () => import("@/components/projects/GlobeView"),
     },
     {
       path: "/project/grid",
-      component: EPFast
+      component: () => import("@/components/projects/EPFast"),
     },
     {
       path: "/project/nature",
-      component: Museum
+      component: () => import("@/components/projects/Museum"),
     },
     {
       path: "/project/ocean",
-      component: ExplOcean
+      component: () => import("@/components/projects/ExplOcean"),
     },
     {
       path: "/project/trees",
-      component: WhatTreesWere
+      component: () => import("@/components/projects/WhatTreesWere"),
     },
     {
       path: "/project/forest",
-      component: CellForest
+      component: () => import("@/components/projects/CellForest"),
     },
     {
       path: "/project/worms",
-      component: Worms
+      component: () => import("@/components/projects/Worms"),
     },
     {
       path: "/project/run",
-      component: Run
+      component: () => import("@/components/projects/Run"),
     },
     {
       path: "/project/okeeffe",
-      component: OKeeffe
+      component: () => import("@/components/projects/OKeeffe"),
     },
     {
       path: "/project/cactris",
-      component: Cactris
+      component: () => import("@/components/projects/Cactris"),
     },
     {
       path: "/project/painless",
-      component: Painless
+      component: () => import("@/components/projects/Painless"),
     },
-    // {
-    //   path: "trees",
-    //   // name: "What Trees Were",
-    //   component: () =>
-    //     import("@/components/projects/Play")
-    // }
-    // {
-    //   path: '/project',
-    //   name: 'project',
-    //   component: Home,
-    //   // redirect: "/",
-    //   children: [{
-    //       path: "/project/epfast",
-    //       // name: "EPFast",
-    //       component: EPFast
-    //     },
-    //     {
-    //       path: "nature",
-    //       // name: "Nature Now",
-    //       component: Museum
-    //     },
-    //     {
-    //       path: "trees",
-    //       // name: "What Trees Were",
-    //       component: () =>
-    //         import("@/components/projects/Play")
-    //     }
-    //   ]
-    // }
-    //   path: "/project/:id",
-    //   name: "Project",
-    //   props: true,
-    //   // component: EPFast
-    //   component: () =>
-    //     import("@/components/projects/" + id)
-    //   // import("@/components/projects/EPFast")
-    // },
-    // {
-    //   path: "/code",
-    //   name: "code",
-    //   component: About
-    // },
-    // {
-    //   path: "/pictures",
-    //   name: "more things",
-    //   component: Pictures
-    // }
-  ]
+  ],
 });

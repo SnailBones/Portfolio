@@ -20,10 +20,8 @@ jobs:
           ssh -o StrictHostKeyChecking=no snailbones@104.248.65.121<< 'ENDSSH'
             source ~/.nvm/nvm.sh
             nvm use 20
-            which node
-            which npm
             cd /var/www/html/Vue
-            git pull origin main
+            git pull origin master
             npm install
             npm run build
           ENDSSH
