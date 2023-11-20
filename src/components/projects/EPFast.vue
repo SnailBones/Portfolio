@@ -97,32 +97,22 @@ export default {
   data: function() {
     return {
       images: [
-        // require("@/assets/img/painless/set.jpg"),
-        // require("@/assets/img/epfast/zoom_nodes.mp4"),
-        // require("@/assets/img/epfast/nodes.mp4"),
-        // require("@/assets/img/painless/set.jpg"),
-        // {
-        //   title: "This doesn't go here",
-        //   href: require("@/assets/img/painless/set.jpg"),
-        //   type: "img/jpg",
-        //   poster: require("@/assets/img/painless/set.jpg")
-        // },
         {
           title: "Nodes",
-          href: require("@/assets/img/epfast/nodes.mp4"),
-          type: "video/mp4",
+          href: require("@/assets/img/epfast/nodes.webm"),
+          type: "video/webm",
           poster: require("@/assets/img/epfast/closekey.png")
         },
         {
           title: "Heat Map",
-          href: require("@/assets/img/epfast/zoom_nodes.mp4"),
-          type: "video/mp4",
+          href: require("@/assets/img/epfast/zoom_nodes.webm"),
+          type: "video/webm",
           poster: require("@/assets/img/epfast/zoomout.png")
         },
         {
           title: "Lines",
-          href: require("@/assets/img/epfast/lines.mp4"),
-          type: "video/mp4",
+          href: require("@/assets/img/epfast/lines.webm"),
+          type: "video/webm",
           poster: require("@/assets/img/epfast/lines.png")
           // description: " "
         },
@@ -130,8 +120,8 @@ export default {
           title: "Islands",
           // description:
           // "Islands are independent micro-grids following the disaster simulation",
-          href: require("@/assets/img/epfast/islands.mp4"),
-          type: "video/mp4",
+          href: require("@/assets/img/epfast/islands.webm"),
+          type: "video/webm",
           poster: require("@/assets/img/epfast/island-icon.png")
         }
       ],

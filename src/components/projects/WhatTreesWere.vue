@@ -1,7 +1,7 @@
 <template>
   <div class="project">
     <h1>What Trees Were</h1>
-    <h3>Lest we forget</h3>
+    <h3>A procedural art generator</h3>
     <div class="carousel">
       <gallery
         loop
@@ -41,30 +41,50 @@
     </div>-->
     <div class="info">
       <div class="imageContainer">
-        <img src="@/assets/img/trees/sea-serpent.gif" />
-        <!-- <video autoplay preload loop muted>
-          <source :src="require('@/assets/img/trees/sea-serpent.gif')" type="video/webm" />
-        </video>-->
+        <!-- <img src="@/assets/img/trees/sea-serpent.gif" /> -->
+        <video autoplay preload loop muted>
+          <source :src="require('@/assets/img/trees/sea-serpent.webm')" type="video/webm" />
+        </video>
       </div>
       <div class="imageContainer">
-        <img src="@/assets/img/trees/japan.gif" />
-        <!-- <video autoplay preload loop muted>
-          <source :src="require('@/assets/img/trees/japan.gif')" type="video/webm" />
-        </video>-->
+        <!-- <img src="@/assets/img/trees/japan.gif" /> -->
+        <video autoplay preload loop muted>
+          <source :src="require('@/assets/img/trees/japan.webm')" type="video/webm" />
+        </video>
       </div>
-      <div class="imageContainer">
+      <!-- <div class="imageContainer">
         <img src="@/assets/img/trees/small-grow.gif" />
         <img src="@/assets/img/trees/geom.gif" />
         <img src="@/assets/img/trees/willow.gif" />
         <img src="@/assets/img/trees/light.gif" />
         <img src="@/assets/img/trees/cypress.gif" />
-        <!-- <video autoplay preload loop muted>
-          <source :src="require('@/assets/img/trees/small-grow.gif')" type="video/webm" />
+      </div> -->
+      <div class="imageContainer">
+        <video autoplay preload loop muted>
+          <source :src="require('@/assets/img/trees/small-grow.webm')" type="video/webm" />
         </video>
+      </div>
+      <div class="imageContainer">
         <video autoplay preload loop muted>
           <source :src="require('@/assets/img/trees/light.webm')" type="video/webm" />
         </video>
+      </div>
+      <div class="imageContainer">
         <video autoplay preload loop muted>
+          <source :src="require('@/assets/img/trees/geom.webm')" type="video/webm" />
+        </video>
+      </div>
+      <div class="imageContainer">
+        <video autoplay preload loop muted>
+          <source :src="require('@/assets/img/trees/willow.webm')" type="video/webm" />
+        </video>
+      </div>
+      <div class="imageContainer">
+        <video autoplay preload loop muted>
+          <source :src="require('@/assets/img/trees/cypress.webm')" type="video/webm" />
+        </video>
+      </div>
+        <!-- <video autoplay preload loop muted>
           <source :src="require('@/assets/img/trees/geom.webm')" type="video/webm" />
         </video>
         <video autoplay preload loop muted>
@@ -72,14 +92,10 @@
         </video>
         <video autoplay preload loop muted>
           <source :src="require('@/assets/img/trees/cypress.webm')" type="video/webm" />
-        </video>-->
-      </div>
+        </video> -->
       <p><i>What Trees Were</i> began as a final project for Computer Graphics and evolved into a creative tool for all your tree-generation needs. Tweak the ruleset to create the tree of your dreams, with advanced mode for interpolation between two rulesets in one tree.</p>
       <p>
-        Featured in
-        <span class="link">
-          <a href="https://www.catherinesinow.com/zines">Timothy</a>
-        </span> zine.
+        Featured in Timothy zine.
       </p>
 
       <p>
@@ -108,42 +124,6 @@ export default {
   data: function() {
     return {
       images: [
-        // require("@/assets/img/painless/set.jpg"),
-        // require("@/assets/img/epfast/zoom_nodes.mp4"),
-        // require("@/assets/img/epfast/nodes.mp4"),
-        // require("@/assets/img/painless/set.jpg"),
-        // {
-        //   title: "This doesn't go here",
-        //   href: require("@/assets/img/painless/set.jpg"),
-        //   type: "img/jpg",
-        //   poster: require("@/assets/img/painless/set.jpg")
-        // },
-        // {
-        //   title: "Model 1",
-        //   href: require("@/assets/img/museum/models/mini.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Model 2",
-        //   href: require("@/assets/img/museum/models/big.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Model 2",
-        //   // description: "Close up",
-        //   href: require("@/assets/img/museum/models/close.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Concept development: sunken labyrinth",
-        //   href: require("@/assets/img/museum/models/labside.jpg"),
-        //   type: "image/jpg"
-        // }
-        // {
-        //   title: "Concept development: sunken labyrinth",
-        //   href: require("@/assets/img/museum/models/labtop.jpg"),
-        //   type: "image/jpg"
-        // }
       ],
       index: null
     };

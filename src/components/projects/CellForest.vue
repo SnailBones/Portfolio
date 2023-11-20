@@ -23,25 +23,8 @@
 				<!-- </div> -->
 			</div>
 		</div>
-		<!-- <img src="@/assets/img/painless/poster.png" width=400px /> -->
-		<!-- <div class="imageContainer">
-		<img src="@/assets/img/museum/models/labtop.jpg" />
-		</div>-->
-		<!-- <div class="imageContainer">
-		<img src="@/assets/img/museum/models/labside.jpg" />
-	</div>
-	<div class="imageContainer">
-		<img src="@/assets/img/museum/models/mini.jpg" />
-	</div>
-	<div class="imageContainer">
-		<img src="@/assets/img/museum/models/big.jpg" />
-	</div>
-	<div class="imageContainer">
-		<img src="@/assets/img/museum/models/close.jpg" />
-		</div>-->
 		<div class="info">
 			<div class="imageContainer">
-				<!-- <img src="@/assets/img/ocean/bullets.mp4" /> -->
 				<video autoplay preload loop muted>
 					<source :src="require('@/assets/img/forest/forest.webm')" type="video/mp4" />
 				</video>
@@ -91,42 +74,6 @@ export default {
 	data: function() {
 		return {
 			images: [
-				// require("@/assets/img/painless/set.jpg"),
-				// require("@/assets/img/epfast/zoom_nodes.mp4"),
-				// require("@/assets/img/epfast/nodes.mp4"),
-				// require("@/assets/img/painless/set.jpg"),
-				// {
-				//   title: "This doesn't go here",
-				//   href: require("@/assets/img/painless/set.jpg"),
-				//   type: "img/jpg",
-				//   poster: require("@/assets/img/painless/set.jpg")
-				// },
-				// {
-				//   title: "Model 1",
-				//   href: require("@/assets/img/museum/models/mini.jpg"),
-				//   type: "image/jpg"
-				// },
-				// {
-				//   title: "Model 2",
-				//   href: require("@/assets/img/museum/models/big.jpg"),
-				//   type: "image/jpg"
-				// },
-				// {
-				//   title: "Model 2",
-				//   // description: "Close up",
-				//   href: require("@/assets/img/museum/models/close.jpg"),
-				//   type: "image/jpg"
-				// },
-				// {
-				//   title: "Concept development: sunken labyrinth",
-				//   href: require("@/assets/img/museum/models/labside.jpg"),
-				//   type: "image/jpg"
-				// }
-				// {
-				//   title: "Concept development: sunken labyrinth",
-				//   href: require("@/assets/img/museum/models/labtop.jpg"),
-				//   type: "image/jpg"
-				// }
 			],
 			index: null
 		};

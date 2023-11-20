@@ -74,13 +74,13 @@
 				<!-- </div> -->
 				<!-- outlink="https://github.com/SnailBones/Tree3D" -->
 				<Thumbnail
-					:img="require('@/assets/img/runner/runner.mp4')"
+					:img="require('@/assets/img/runner/runner.webm')"
 					title="Prism Escape"
 					info="Move your body to race through a virtual landscape in this fast-paced agility game."
 					link="run"
 				/>
 				<Thumbnail
-					:img="require('@/assets/img/epfast/loop.mp4')"
+					:img="require('@/assets/img/epfast/loop.webm')"
 					zoomOut="true"
 					title="Electric Power Fast"
 					info="Visualizing chaos in the grid."
@@ -101,7 +101,7 @@
 					link="trees"
 				/>
 				<Thumbnail
-					:img="require('@/assets/img/worms/worms.mp4')"
+					:img="require('@/assets/img/worms/worms.webm')"
 					title="King of the Worms"
 					info="Multi-player snake game in real space."
 					link="worms"
@@ -132,7 +132,7 @@
 					outlink="https://github.com/eharkins/RenaissanceGAN"
 				/>
 				<Thumbnail
-					:img="require('@/assets/img/ocean/bullets.mp4')"
+					:img="require('@/assets/img/ocean/bullets.webm')"
 					title="ExplOcean"
 					info="Blow up your opponent—and blow up some islands in a battle that constantly recreates its map."
 					zoomOut="true;"

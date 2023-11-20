@@ -12,7 +12,6 @@
         @close="index = null"
       ></gallery>
       <div class="d-flex flex-wrap justify-content-center">
-        <!-- <div class="shade"> -->
         <div
           class="image shade"
           v-for="(image, imageIndex) in images"
@@ -20,39 +19,20 @@
           @click="index = imageIndex"
           :style="{ backgroundImage: 'url(' + image.href + ')' }"
         />
-        <!-- </div> -->
       </div>
     </div>
-    <!-- <img src="@/assets/img/painless/poster.png" width=400px /> -->
-    <!-- <div class="imageContainer">
-    <img src="@/assets/img/museum/models/labtop.jpg" />
-    </div>-->
-    <!-- <div class="imageContainer">
-    <img src="@/assets/img/museum/models/labside.jpg" />
-  </div>
-  <div class="imageContainer">
-    <img src="@/assets/img/museum/models/mini.jpg" />
-  </div>
-  <div class="imageContainer">
-    <img src="@/assets/img/museum/models/big.jpg" />
-  </div>
-  <div class="imageContainer">
-    <img src="@/assets/img/museum/models/close.jpg" />
-    </div>-->
     <div class="info">
       <div class="imageContainer">
-        <!-- <img src="@/assets/img/ocean/bullets.mp4" /> -->
         <video autoplay preload loop muted>
-          <source :src="require('@/assets/img/ocean/bullets.mp4')" type="video/mp4" />
+          <source :src="require('@/assets/img/ocean/bullets.webm')" type="video/webm" />
         </video>
       </div>
       <p>ExplOcean is a naval action game whose players cannot leave their surroundings unchanged. The world is subject to being completely reshaped by the players' weapons. My team developed this project in Unity3D, and my responsibilities included the terrain system, physics, and enemy behavior.</p>
       <p />
       <p>Players and enemies have two different weapons available. Gunshots fly in a straight line, colliding with an enemy or an island above sea level. Cannons move in an arc, and are more likely to hit the ocean floor, with a much larger explosion. The two weapons not only encourage complex combat strategies, their complementary destruction also mantains terrain variety.</p>
       <div class="imageContainer">
-        <!-- <img src="@/assets/img/ocean/bullets.mp4" /> -->
         <video autoplay preload loop muted>
-          <source :src="require('@/assets/img/ocean/cannons.mp4')" type="video/mp4" />
+          <source :src="require('@/assets/img/ocean/cannons.webm')" type="video/webm" />
         </video>
       </div>
       <p>
@@ -81,42 +61,6 @@ export default {
   data: function() {
     return {
       images: [
-        // require("@/assets/img/painless/set.jpg"),
-        // require("@/assets/img/epfast/zoom_nodes.mp4"),
-        // require("@/assets/img/epfast/nodes.mp4"),
-        // require("@/assets/img/painless/set.jpg"),
-        // {
-        //   title: "This doesn't go here",
-        //   href: require("@/assets/img/painless/set.jpg"),
-        //   type: "img/jpg",
-        //   poster: require("@/assets/img/painless/set.jpg")
-        // },
-        // {
-        //   title: "Model 1",
-        //   href: require("@/assets/img/museum/models/mini.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Model 2",
-        //   href: require("@/assets/img/museum/models/big.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Model 2",
-        //   // description: "Close up",
-        //   href: require("@/assets/img/museum/models/close.jpg"),
-        //   type: "image/jpg"
-        // },
-        // {
-        //   title: "Concept development: sunken labyrinth",
-        //   href: require("@/assets/img/museum/models/labside.jpg"),
-        //   type: "image/jpg"
-        // }
-        // {
-        //   title: "Concept development: sunken labyrinth",
-        //   href: require("@/assets/img/museum/models/labtop.jpg"),
-        //   type: "image/jpg"
-        // }
       ],
       index: null
     };

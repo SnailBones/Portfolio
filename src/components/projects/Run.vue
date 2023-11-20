@@ -3,7 +3,7 @@
 		<h1>Prism Escape</h1>
 		<div class="imageContainer">
 			<video autoplay preload loop muted>
-					<source :src="require('@/assets/img/runner/runner.mp4')" type="video/mp4" />
+					<source :src="require('@/assets/img/runner/runner.webm')" type="video/webm" />
 			 </video>
 		</div>
 		<div class="info">
