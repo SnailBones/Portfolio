@@ -1,1 +1,1 @@
-[https://ailanth.us/#/]
+https://ailanth.us/#/
